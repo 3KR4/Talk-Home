@@ -82,10 +82,10 @@ html {
 a {
   text-decoration: none;
 }
-.h2,.h3,.h4,h5,h6,li,svg,a {
+h1,h2,.h3,.h4,h5,h6,li,svg,a {
   color: var(--title-color);
 }
-.h2 {
+h2 {
   font-size: 22px !important;
   font-weight: 500;
 }
@@ -217,7 +217,7 @@ hr {
   z-index: -1;
   box-shadow: 0 0 245px 285px #0000006b;
 }
-.landing .main-holder > p.h2 {
+.landing .main-holder > h2 {
   font-size: 50px !important;
   font-weight: 500;
   color: white;
@@ -364,7 +364,7 @@ hr {
   border-radius: 5px;
   min-width: 46%;
 }
-.success .text .h2 {
+.success .text h2 {
   margin-bottom: 20px;
 }
 .success .text {
@@ -411,7 +411,7 @@ hr {
 .mission .text {
   padding-left: 35px;
 }
-.mission .text .h2 {
+.mission .text h2 {
   margin: 8px 0 13px;
   border-bottom: 2px solid var(--main-color);
   width: fit-content;
@@ -481,7 +481,7 @@ hr {
   justify-content: center;
   flex-direction: column;
   gap: 15px;
-  padding: 45px;
+  padding: 35px;
   border-radius: 26px 26px 4px 4px;
 }
 .whyChooseUs .card svg {
@@ -516,7 +516,7 @@ hr {
   min-width: 50%;
   object-fit: cover;
 }
-.about .info .h2 {
+.about .info h2 {
   margin: 8px 0 13px;
   border-bottom: 2px solid var(--main-color);
   width: fit-content;
@@ -955,7 +955,7 @@ hr {
   .success {
     border-radius: 6px;
   }
-  .success .text .h2 {
+  .success .text h2 {
     margin-bottom: 20px;
     font-size: 21px;
     max-width: 100%;
