@@ -114,30 +114,7 @@ hr {
   position: relative;
 }
 
-.main-logo {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  transform: translateY(-1px);
-}
-.main-logo h2 {
-  display: flex;
-  align-items: center;
-  font-size: 23px;
-  transform: translateY(1px);
-  position: relative;
-}
-.main-logo h2 span {
-  color: var(--main-color);
-}
-.main-logo hr {
-  width: 2px;
-  height: 23px;
-  background: var(--main-color);
-}
-.main-logo img {
-  width: 60px;
-}
+
 
 /*! ========== HEADER ========== */
 
@@ -155,6 +132,10 @@ hr {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+}
+.main-logo img{
+  width: 164px;
+  height: 48px;
 }
 .header .links {
   display: flex;
@@ -295,7 +276,7 @@ hr {
   font-size: 52px;
 }
 .services .card {
-  width: 49%;
+  width: 48%;
 }
 .services .card button {
   width: 100%;
@@ -436,7 +417,14 @@ hr {
   margin: -7px 0 50px;
 }
 .booking .holder {
-  width: 95%;
+  width: 100%;
+  background: var(--section-color);
+  padding-bottom: 47px;
+  border-radius: 6px;
+}
+.booking .holder > * {
+  width: 100%;
+
 }
 
 /*! ========== whyChooseUs ========== */
@@ -543,23 +531,18 @@ hr {
 }
 .footer .middle {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   border-top: 2px solid var(--border-color);
-  padding: 40px 0px;
+  padding: 40px 45px 40px 0px;
 }
-.footer .middle > .main-logo {
+.footer .middle .main-logo {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  gap: 2px;
-  justify-content: center;
-  transform: translate(0);
+  transform: translateX(70px) !important;
 }
-.footer .middle > .main-logo > hr {
-  width: 95%;
-  height: 2px;
-  margin-bottom: 4px;
-  background: var(--border-color);
+.footer .middle .main-logo img {
+  width: 228px;
+  height: 79px;
 }
 .footer .middle hr {
   background: var(--border-color);
@@ -590,45 +573,21 @@ hr {
   background: var(--main-color);
   bottom: -2px;
 }
-.footer .middle .main-logo img{
-  width: 105px;
-}
-.footer .middle .links svg {
+
+.footer .middle svg {
   font-size: 19px;
 }
-.footer .middle .contact ul {
-  display: flex;
-  gap: 38px;
-}
-.footer .middle .contact ul li {
+
+.footer .middle .contact .email {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-}
-.footer .middle .contact h4 {
-  font-weight: 500;
-  margin-bottom: 6px;
-}
-.footer .middle .contact ul li p {
-  margin-bottom: 6px;
-}
-.footer .middle .contact ul > li:last-child {
-  margin-top: -44px;
-}
-.footer .middle .contact ul > li .main-button {
-  margin-top: 15px;
-  display: flex;
-}
-.footer .middle .contact .title {
   font-size: 17px;
-  color: var(--title-color);
-  display: flex;
-  gap: 9px;
-  align-items: center;
-  margin-bottom: 9px;
+  gap: 13px;
 }
 .footer .middle p {
-  margin-bottom: 4px;
+  margin-bottom: 11px;
+  font-size: 16px;
+  font-weight: 500;
 }
 .footer .middle .main-button {
   background: #2cd46b;
@@ -771,18 +730,84 @@ hr {
   }
 }
 
+@media (max-width: 992px) {
+  .App > * {
+    padding: 30px 8px;
+  }
+  .header {
+    padding: 15px 0 !important;
+  }
+  .landing {
+    height: 68vh;
+    background-position: 77%;
+    clip-path: polygon(0 0px, 108% 0, 100% 100%, 44% 97%, -36px 100%);
+  }
+  .landing::after {
+    background: #0000006b;
+  }
+  .landing .main-holder {
+    width: fit-content;
+    left: 2%;
+    top: 35%;
+  }
+  .landing .main-holder::after {
+    box-shadow: 0 0 245px 170px #00000078;
+  }
+  .landing .main-holder::after {
+    left: 19%;
+  }
+  .landing .main-holder > p {
+    max-width: 618px;
+  }
+  .section-title {
+    font-size: 21px;
+    max-width: 95%;
+  }
+  .services .head {
+    flex-direction: row;
+    gap: 13px;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 190px;
+  }
+  .services .card button {
+    text-align: left;
+  }
+  .services .card {
+    width: 48%;
+  }
+  .about .container {
+    padding-right: 0;
+    max-width: 90%;
+  }
+  .footer .middle {
+    flex-wrap: wrap;
+    row-gap: 22px;
+    column-gap: 60px;
+    justify-content: flex-start;
+  }
+  .whyChooseUs {
+    margin: -30px auto -32px;
+  }
+  .success {
+    gap: 0;
+  }
+  .success .container {
+    flex-direction: column;
+  }
+}
 
 @media (max-width: 768px) {
-  .header img {
-    height: 45px;
-    width: 50px;
-  }
-  .header .main-logo h2 {
-    font-size: 16px;
-    transform: translateY(1px);
-  }
+
   .header .container {
     padding-right: 25px;
+  }
+  .main-logo img {
+    width: 160px;
+    height: 43px;
+  }
+  .footer .middle .main-logo { 
+    display: none;
   }
   .header .links {
     position: absolute;
@@ -905,75 +930,6 @@ hr {
   } 
 }
 
-@media (max-width: 992px) {
-  .App > * {
-    padding: 30px 8px;
-  }
-  .header {
-    padding: 15px 0 !important;
-  }
-  .header .main-logo h2 {
-    font-size: 20px !important;
-  }
-  .landing {
-    height: 68vh;
-    background-position: 77%;
-    clip-path: polygon(0 0px, 108% 0, 100% 100%, 44% 97%, -36px 100%);
-  }
-  .landing::after {
-    background: #0000006b;
-  }
-  .landing .main-holder {
-    width: fit-content;
-    left: 2%;
-    top: 35%;
-  }
-  .landing .main-holder::after {
-    box-shadow: 0 0 245px 170px #00000078;
-  }
-  .landing .main-holder::after {
-    left: 19%;
-  }
-  .landing .main-holder > p {
-    max-width: 618px;
-  }
-  .section-title {
-    font-size: 21px;
-    max-width: 95%;
-  }
-  .services .head {
-    flex-direction: row;
-    gap: 13px;
-    flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 190px;
-  }
-  .services .card button {
-    text-align: left;
-  }
-  .services .card {
-    width: 48%;
-  }
-  .about .container {
-    padding-right: 0;
-    max-width: 90%;
-  }
-  .footer .middle {
-    flex-wrap: wrap;
-    row-gap: 22px;
-    column-gap: 60px;
-    justify-content: flex-start;
-  }
-  .whyChooseUs {
-    margin: -30px auto -32px;
-  }
-  .success {
-    gap: 0;
-  }
-  .success .container {
-    flex-direction: column;
-  }
-}
 
 
 @media (max-width:400px) {

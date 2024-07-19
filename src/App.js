@@ -1,10 +1,11 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import logo from "../src/img/logo4.png";
-
+import logo1 from "../src/img/logo-black.png";
+import logo2 from "../src/img/logo-white.png";
 import mission from "../src/img/mission.jpg";
 import success from "../src/img/success.jpg";
 import about from "../src/img/about.jpg";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -13,8 +14,8 @@ import { InlineWidget } from "react-calendly";
 import { HiBars3 } from "react-icons/hi2";
 import { IoCloseOutline } from "react-icons/io5";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSlack } from "@fortawesome/free-brands-svg-icons";
-import { FaChevronDown, FaWhatsapp } from "react-icons/fa";
+import { faSlack, faSquareFacebook, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { FaChevronDown, FaWhatsapp} from "react-icons/fa";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import {
@@ -42,7 +43,7 @@ function App() {
     });
   }, []);
 
-  const whatsappNumber = "01150865211";
+  const whatsappNumber = "01212078797";
   const whatsappLink = `https://wa.me/20${whatsappNumber}`;
 
   return (
@@ -50,17 +51,14 @@ function App() {
       <header className="header">
         <div className="container">
           <a className="main-logo" href="">
-            <img src={logo} />{" "}
-            <h2>
-              TalkTo<span>Homes</span>
-            </h2>
+            <img src={mode == 'dark' ? logo2 : logo1} />
           </a>
           <div className={`links ${openMenu ? "active" : ""}`}>
             <a href="#services">services</a>
             <a href="#about">about</a>
             <a href="#mission">our mission</a>
             <a className="main-button" href="#bockCall">
-              Bock a Call
+              Book a Call
             </a>
           </div>
           <div
@@ -105,7 +103,7 @@ function App() {
       <div className="landing">
         <div data-aos="zoom-in-left" className="main-holder container">
           <p>TalkToHomes</p>
-          <h3>Your Deal-Maker partner</h3>
+          <h3>Turning Conversations <br/> into Cash Flow</h3>
           <p>Unlocking the door to lucrative real estate deals, one conversation at a time. At Talk to Homes, we are the cold calling experts dedicated to helping investors like you find hidden opportunities and maximize your returns.</p>
         </div>
       </div>
@@ -221,7 +219,7 @@ function App() {
       <section className="booking container" id="bockCall">
         <h2 className="section-title">Let's Discuss Your Needs More</h2>
         <div data-aos="zoom-in" className="holder">
-          <InlineWidget url="https://calendly.com/your-calendly-link" />
+          <InlineWidget url="https://calendly.com/johnedwards-talktohomes/30min" />
         </div>
       </section>
       <section className="whyChooseUs container">
@@ -267,15 +265,13 @@ function App() {
               <p>Schedule an online call with us now</p>
             </div>
             <a className="main-button" href="#bockCall">
-              bock a call
+              Book a Call
             </a>
           </div>
           <div className="middle">
             <a data-aos="zoom-in-right" className="main-logo" href="">
-              <img src={logo} />
-              <h2>
-                TalkTo <span>Homes</span>
-              </h2>
+              <img src={mode == 'dark' ? logo2 : logo1} />
+
             </a>
             <div className="links">
               <h3>Links</h3>
@@ -295,20 +291,15 @@ function App() {
             <div className="contact">
               <h3>contact us</h3>
               <div className="email">
-                <div className="title">
-                  <FontAwesomeIcon icon={faEnvelopeOpenText} /> Email
-                </div>
-                <div className="holder">
-                  <p>Mouhamedmahmoud820@gmail.com</p>
-                  <p>Mouhamedmahmoud820@gmail.com</p>
-                </div>
+                <a href="mailto:mouhamedmahmoud820@gmail.com"><FontAwesomeIcon icon={faEnvelopeOpenText} /> Email</a>
+                <a href="https://www.facebook.com/profile.php?id=61556653045857"><FontAwesomeIcon icon={faSquareFacebook} /> FaceBook</a>
+                <a href="https://www.linkedin.com/in/muhammad-fathi-a60942234/"><FontAwesomeIcon icon={faLinkedin} /> LinkedIn</a>
               </div>
             </div>
             <div className="phone">
               <h3>Phone</h3>
               <div className="holder">
-                <p>011508643765211</p>
-                <p>010456706218444</p>
+                <p>+1(713)701-5398</p>
                 <a
                   className="main-button"
                   href={whatsappLink}
