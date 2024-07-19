@@ -791,10 +791,8 @@ hr {
     top: 35%;
   }
   .landing .main-holder::after {
-    box-shadow: 0 0 245px 170px #00000078;
-  }
-  .landing .main-holder::after {
     left: 19%;
+    box-shadow: 0 0 245px 170px #00000038;
   }
   .landing .main-holder > p {
     max-width: 618px;
@@ -807,14 +805,14 @@ hr {
     flex-direction: row;
     gap: 13px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     column-gap: 190px;
   }
   .services .card button {
     text-align: left;
   }
   .services .card {
-    width: 48%;
+    width: 100%;
   }
   .about .container {
     padding-right: 0;
@@ -841,6 +839,9 @@ hr {
   .booking .holder > * {
     width: 100%;
     height: 894px !important;
+  }
+  .footer .middle .main-logo{
+    transform: translate(0) !important;
   }
 }
 
@@ -908,6 +909,12 @@ hr {
   .landing .main-holder .h3 {
     font-size: 36px;
   }
+  .landing .main-holder > h2 {
+    font-size: 31px !important;
+  }
+  .landing .main-holder > p:first-child {
+    margin-bottom: -7px;
+  }
   .landing .main-holder .bottomSide {
     flex-direction: column;
     align-items: flex-start;
@@ -933,9 +940,16 @@ hr {
   }
   .services .card button {
     font-size: 13px;
+    padding: 30px 13px 30px 17px;
   }
   .services .card {
     width: 100% !important;
+  }
+  .services .card h2 {
+    font-size: 18px !important;
+  }
+  .services .head {
+    justify-content: center;
   }
   .whyChooseUs .card {
     padding: 25px 9px;
@@ -1001,6 +1015,6 @@ hr {
     transform: translateX(10px);
   } 
   .section-title {
-    font-size: 24px !important;
+    font-size: 20px !important;
   }
 }
