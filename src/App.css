@@ -82,8 +82,18 @@ html {
 a {
   text-decoration: none;
 }
-h1,h2,h3,h4,h5,h6,li,svg,a {
+.h2,.h3,.h4,h5,h6,li,svg,a {
   color: var(--title-color);
+}
+.h2 {
+  font-size: 22px !important;
+  font-weight: 500;
+}
+.h3 {
+  font-size: 20px !important;
+}
+.h4 {
+  font-size: 18px !important;
 }
 p {
   color: var(--paragraph);
@@ -207,10 +217,16 @@ hr {
   z-index: -1;
   box-shadow: 0 0 245px 285px #0000006b;
 }
-.landing .main-holder > p {
+.landing .main-holder > p.h2 {
+  font-size: 50px !important;
+  font-weight: 500;
+  color: white;
+}
+.landing .main-holder > p.p {
   color: white;
   padding: 5px;
   font-weight: 500;
+  font-size: 17px;
   letter-spacing: 1px;
   max-width: 538px;
   line-height: 1.5;
@@ -220,7 +236,7 @@ hr {
   font-weight: 600;
   margin-bottom: -10px;
 }
-.landing .main-holder h3 {
+.landing .main-holder .h3 {
   color: white;
   font-size: 46px;
   font-weight: 500;
@@ -255,7 +271,7 @@ hr {
   margin-bottom: 15px;
   width: 85%;
 }
-.services .head h4 {
+.services .head .h4 {
   font-size: 28px;
 }
 .services .head a {
@@ -310,7 +326,7 @@ hr {
 .services button:focus > svg{
   rotate: 180deg;
 }
-.services button:focus > div h3,
+.services button:focus > div .h3,
 .services button:focus svg {
   color: white;
 }
@@ -325,7 +341,7 @@ hr {
   transition: 1.2s;
   border-radius: 0 0 14px 14px;
 }
-.services p {
+.services .hideHight p {
   line-height: 1.6;
   letter-spacing: 0.5px;
   padding: 15px 24px;
@@ -348,17 +364,23 @@ hr {
   border-radius: 5px;
   min-width: 46%;
 }
-.success .text h2 {
+.success .text .h2 {
   margin-bottom: 20px;
+}
+.success .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 .success .text .card {
   background: var(--section-color);
-  margin-bottom: 14px;
   padding: 20px 25px;
   border-radius: 8px 10px 10px 8px;
   border-right: 4px solid var(--main-color);
 }
-.success .text .card h4 {
+.success .text .card .h4 {
   margin-bottom: 6px;
   color: var(--main-color);
 }
@@ -389,7 +411,7 @@ hr {
 .mission .text {
   padding-left: 35px;
 }
-.mission .text h2 {
+.mission .text .h2 {
   margin: 8px 0 13px;
   border-bottom: 2px solid var(--main-color);
   width: fit-content;
@@ -417,14 +439,14 @@ hr {
   margin: -7px 0 50px;
 }
 .booking .holder {
-  width: 100%;
+  width: 92%;
   background: var(--section-color);
   padding-bottom: 47px;
   border-radius: 6px;
 }
 .booking .holder > * {
   width: 100%;
-
+  height: 660px !important;
 }
 
 /*! ========== whyChooseUs ========== */
@@ -466,7 +488,7 @@ hr {
   font-size: 50px;
   color: var(--title-color);
 }
-.whyChooseUs .card h4 {
+.whyChooseUs .card .h4 {
   color: var(--paragraph);
   font-size: 17px;
 }
@@ -494,7 +516,7 @@ hr {
   min-width: 50%;
   object-fit: cover;
 }
-.about .info h2 {
+.about .info .h2 {
   margin: 8px 0 13px;
   border-bottom: 2px solid var(--main-color);
   width: fit-content;
@@ -518,7 +540,7 @@ hr {
   justify-content: space-between;
   padding: 30px 0;
 }
-.footer .top .text h3 {
+.footer .top .text .h3 {
   font-size: 20px;
   margin-bottom: 5px;
 }
@@ -556,7 +578,7 @@ hr {
 .footer .middle .links .title {
   margin-bottom: 5px;
 }
-.footer .middle h3 {
+.footer .middle .h3 {
   border-bottom: 2px solid var(--main-color);
   width: fit-content;
   position: relative;
@@ -564,7 +586,7 @@ hr {
   width: fit-content;
   padding-bottom: 10px;
 }
-.footer .middle h3::before {
+.footer .middle .h3::before {
   content: '';
   position: absolute;
   left: 0;
@@ -584,10 +606,28 @@ hr {
   font-size: 17px;
   gap: 13px;
 }
+.footer .middle .contact .email .hold {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+} 
+.footer .middle .contact .email .hold a {
+  text-transform: lowercase;
+}
+.footer .middle .contact .email > div,
+.footer .middle .contact .email > a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.footer .middle .contact .email > div {
+  gap: 5px;
+}
 .footer .middle p {
-  margin-bottom: 11px;
+  margin-bottom: 16px;
   font-size: 16px;
   font-weight: 500;
+  color: var(--title-color);
 }
 .footer .middle .main-button {
   background: #2cd46b;
@@ -613,7 +653,7 @@ hr {
   row-gap: 20px;
   column-gap: 40px;
 }
-.footer .info .holder div h3 {
+.footer .info .holder div .h3 {
   margin-bottom: 7px;
 }
 .footer .info .holder div p {
@@ -795,6 +835,13 @@ hr {
   .success .container {
     flex-direction: column;
   }
+  .booking .holder {
+    width: 100% !important;
+  }
+  .booking .holder > * {
+    width: 100%;
+    height: 894px !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -858,7 +905,7 @@ hr {
   .landing .main-holder {
     top: 30%;
   }
-  .landing .main-holder h3 {
+  .landing .main-holder .h3 {
     font-size: 36px;
   }
   .landing .main-holder .bottomSide {
@@ -897,15 +944,18 @@ hr {
   .whyChooseUs .card svg {
     font-size: 42px;
   }
+  .whyChooseUs {
+    margin: 40px auto -32px;
+    padding-top: 65px;
+  }
   .mission .container  {
     gap: 25px;
     padding: 13px;
   }
   .success {
     border-radius: 6px;
-    padding: 30px 15px;
   }
-  .success .text h2 {
+  .success .text .h2 {
     margin-bottom: 20px;
     font-size: 21px;
     max-width: 100%;
@@ -928,12 +978,17 @@ hr {
   .services .cards {
     padding: 0 15px;
   } 
+  .booking .holder {
+    background: transparent;
+    height: 760px !important;
+  }
+
 }
 
 
 
 @media (max-width:400px) {
-  .landing .main-holder h3 {
+  .landing .main-holder .h3 {
     font-size: 34px;
     margin: 3px 0;
   } 

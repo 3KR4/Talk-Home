@@ -2,34 +2,33 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import logo1 from "../src/img/logo-black.png";
 import logo2 from "../src/img/logo-white.png";
-import mission from "../src/img/mission.jpg";
-import success from "../src/img/success.jpg";
-import about from "../src/img/about.jpg";
+import mission from "../src/img/test3.jpg";
+import success from "../src/img/test2.jpg";
+import about from "../src/img/test1.jpg";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 import { InlineWidget } from "react-calendly";
 // ICONS
+//icons
 import { HiBars3 } from "react-icons/hi2";
 import { IoCloseOutline } from "react-icons/io5";
+import { FaChevronDown, FaWhatsapp } from "react-icons/fa";
+
+// From @fortawesome/react-fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSlack, faSquareFacebook, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { FaChevronDown, FaWhatsapp} from "react-icons/fa";
+import { faHouseChimney, faUserGroup, faLayerGroup, faHandshake, faUserTie, faBarsProgress, faWandMagicSparkles } from "@fortawesome/free-solid-svg-icons";
+import { faSquareFacebook, faLinkedin, faSlack } from "@fortawesome/free-brands-svg-icons";
+
+
+// From @mui/icons-material
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
-import {
-  faUserTie,
-  faWandMagicSparkles,
-  faBarsProgress,
-  faEnvelopeOpenText,
-  faHouseChimney,
-  faUserGroup,
-  faLayerGroup,
-} from "@fortawesome/free-solid-svg-icons";
+
 
 function App() {
-  const [mode, setMode] = useState(localStorage.getItem("theme") || "dark");
+  const [mode, setMode] = useState(localStorage.getItem("theme") || "light");
   const [openMenu, setOpenMenu] = useState(false);
 
   useEffect(() => {
@@ -102,18 +101,18 @@ function App() {
       </header>
       <div className="landing">
         <div data-aos="zoom-in-left" className="main-holder container">
-          <p>TalkToHomes</p>
-          <h3>Turning Conversations <br/> into Cash Flow</h3>
-          <p>Unlocking the door to lucrative real estate deals, one conversation at a time. At Talk to Homes, we are the cold calling experts dedicated to helping investors like you find hidden opportunities and maximize your returns.</p>
+          <p className="p">TalkToHomes</p>
+          <p className='h2'>Turning Conversations <br/> into Cash Flow</p>
+          <p className="p">Unlocking the door to lucrative real estate deals, one conversation at a time. At Talk to Homes, we are the cold calling experts dedicated to helping investors like you find hidden opportunities and maximize your returns.</p>
         </div>
       </div>
       <section className="services container" id="services">
-        <h2 className="section-title">
+        <p className="section-title h2">
           Talk to Homes <br />
           Turning Conversations into Cash Flow
-        </h2>
+        </p>
         <div className="head">
-          <h4>services we provide</h4>
+          <p className='h4'>services we provide</p>
           <a className="main-button" href="#">
             Get Started
           </a>
@@ -123,7 +122,7 @@ function App() {
             <button>
               <div>
                 <FontAwesomeIcon icon={faUserTie} />
-                <h3>Cold Calling Excellence</h3>
+                <p className='h2'>Cold Calling Excellence</p>
               </div>
               <FaChevronDown />
             </button>
@@ -140,7 +139,7 @@ function App() {
             <button>
               <div>
                 <FontAwesomeIcon icon={faBarsProgress} />
-                <h3>Strategic Lead Generation</h3>
+                <p className='h2'>Strategic Lead Generation</p>
               </div>
               <FaChevronDown />
             </button>
@@ -156,8 +155,8 @@ function App() {
           <div data-aos="zoom-in" className="card">
             <button>
               <div>
-                <FontAwesomeIcon icon={faWandMagicSparkles} />
-                <h3>End-to-End Deal Facilitation</h3>
+              <FontAwesomeIcon icon={faHandshake} />
+                <p className='h2'>End-to-End Deal Facilitation</p>
               </div>
               <FaChevronDown />
             </button>
@@ -173,12 +172,12 @@ function App() {
         </div>
       </section>
       <section className="success">
-        <h2 className="section-title">Why Choose Talk to Homes?</h2>
+        <p className="section-title h2">Why Choose Talk to Homes?</p>
         <div className="container">
           <img src={success} />
           <article className="text">
             <div className="card">
-              <h4>Proven Success:</h4>{" "}
+              <p className='h4'>Proven Success:</p>{" "}
               <p>
                 Our results-driven approach has helped countless investors close
                 deals that they never thought possible. We bring expertise,
@@ -186,7 +185,7 @@ function App() {
               </p>
             </div>
             <div className="card">
-              <h4>Personalized Strategies:</h4>{" "}
+              <p className='h4'>Personalized Strategies:</p>{" "}
               <p>
                 We understand that no two investors are alike. That's why we
                 tailor our services to match your unique goals and investment
@@ -194,7 +193,7 @@ function App() {
               </p>
             </div>
             <div className="card">
-              <h4>Dedicated Partnership:</h4>{" "}
+              <p className='h4'>Dedicated Partnership:</p>{" "}
               <p>
                 When you work with Talk to Homes, you get more than just a service
                 – you get a dedicated partner. We're committed to your success and
@@ -208,7 +207,7 @@ function App() {
       <section className="mission" id="mission">
         <div className="container">
           <article className="text">
-            <h2>Who We Are:</h2>
+            <p className='h2'>Who We Are:</p>
             <p>
             Talk to Homes is your premier partner in real estate investing. Our team of seasoned professionals is passionate about connecting investors with their next big deal. With a sharp focus on cold calling, we excel in turning potential leads into profitable investments. 
             </p>
@@ -217,29 +216,29 @@ function App() {
         </div>
       </section>
       <section className="booking container" id="bockCall">
-        <h2 className="section-title">Let's Discuss Your Needs More</h2>
+        <p className="section-title h2">Let's Discuss Your Needs More</p>
         <div data-aos="zoom-in" className="holder">
           <InlineWidget url="https://calendly.com/johnedwards-talktohomes/30min" />
         </div>
       </section>
       <section className="whyChooseUs container">
-        <h2 className="section-title">Best Reasone For Choose Our Service</h2>
+        <p className="section-title h2">Best Reasone For Choose Our Service</p>
         <div className="cards">
           <div data-aos="zoom-in-right" className="card">
             <FontAwesomeIcon data-aos="zoom-in" icon={faUserTie} />
-            <h4>Cost-Effectiveness</h4>
+            <p className='h4'>Cost-Effectiveness</p>
           </div>
           <div data-aos="zoom-in" className="card">
             <FontAwesomeIcon data-aos="zoom-in" icon={faBarsProgress} />
-            <h4>Efficiency</h4>
+            <p className='h4'>Efficiency</p>
           </div>
           <div data-aos="zoom-in" className="card">
             <FontAwesomeIcon data-aos="zoom-in" icon={faWandMagicSparkles} />
-            <h4>Quality control</h4>
+            <p className='h4'>Quality control</p>
           </div>
           <div data-aos="zoom-in-left" className="card">
             <FontAwesomeIcon data-aos="zoom-in" icon={faSlack} />
-            <h4>Matching Client Expectations</h4>
+            <p className='h4'>Matching Client Expectations</p>
           </div>
         </div>
       </section>
@@ -247,7 +246,7 @@ function App() {
         <div className="container">
           <img src={about} />
           <article className="info">
-            <h2>Let's Get Started</h2>
+            <p className='h2'>Let's Get Started</p>
             <p>
               Ready to turn conversations into cash flow? Let Talk to Homes be
               your secret weapon in the competitive world of real estate
@@ -261,7 +260,7 @@ function App() {
         <div className="container">
           <div className="top">
             <div className="text">
-              <h3>what are you waiting for</h3>
+              <p className='h3'>what are you waiting for</p>
               <p>Schedule an online call with us now</p>
             </div>
             <a className="main-button" href="#bockCall">
@@ -274,7 +273,7 @@ function App() {
 
             </a>
             <div className="links">
-              <h3>Links</h3>
+              <p className='h3'>Links</p>
               <div>
                 <a href="#services">
                   <FontAwesomeIcon icon={faHouseChimney} /> services
@@ -289,15 +288,21 @@ function App() {
             </div>
 
             <div className="contact">
-              <h3>contact us</h3>
+              <p className='h3'>contact us</p>
               <div className="email">
-                <a href="mailto:mouhamedmahmoud820@gmail.com"><FontAwesomeIcon icon={faEnvelopeOpenText} /> Email</a>
                 <a href="https://www.facebook.com/profile.php?id=61556653045857"><FontAwesomeIcon icon={faSquareFacebook} /> FaceBook</a>
                 <a href="https://www.linkedin.com/in/muhammad-fathi-a60942234/"><FontAwesomeIcon icon={faLinkedin} /> LinkedIn</a>
+                <div>
+
+                  <div className="hold">
+                    <a href="mailto:Talktohomes@outlook.com">Talktohomes@outlook.com</a>
+                    <a href="mailto:johnedwards@talktohomes.com">Johnedwards@talktohomes.com</a>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="phone">
-              <h3>Phone</h3>
+              <p className='h3'>Phone</p>
               <div className="holder">
                 <p>+1(713)701-5398</p>
                 <a
